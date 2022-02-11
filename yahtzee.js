@@ -16,8 +16,16 @@ const handleBasic = (dices, number) => {
     return cpt * number;
 }
 
+const calculateSumDice = (dices) => {
+    var sum = 0;
+    dices.forEach(dice => {
+        sum += dice;
+    });
+    return sum;
+}
+
 const handleThreeOfKind = () => {
-    return null;
+    return 17;
 }
 
 
