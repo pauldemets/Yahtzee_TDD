@@ -65,11 +65,11 @@ test('test full house', () => {
     expect(yahtzee.handleFullHouse(dices3)).toBe(25);
 });
 
-test('test small straight', () => {
+test('test large straight', () => {
     const dices = [2, 3, 4, 5, 6];
-    expect(yahtzee.handleSmallStraight(dices)).toBe(30);
+    expect(yahtzee.handleLargeStraight(dices)).toBe(40);
     const dices2 = [1, 2, 3, 4, 5];
-    expect(yahtzee.handleSmallStraight(dices2)).toBe(30);
+    expect(yahtzee.handleLargeStraight(dices2)).toBe(40);
     const dices3 = [2, 6, 1, 4, 4];
-    expect(yahtzee.handleSmallStraight(dices3)).toBe(0);
+    expect(yahtzee.handleLargeStraight(dices3)).toBe(0);
 });

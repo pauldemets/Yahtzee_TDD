@@ -87,7 +87,7 @@ const handleFullHouse = (dices) => {
         0;
 }
 
-const handleSmallStraight = (dices) => {
+const handleLargeStraight = (dices) => {
     var isValid = true;
     var i = 0;
     var tempDice = -1;
@@ -101,7 +101,7 @@ const handleSmallStraight = (dices) => {
     }
 
     return isValid ?
-        30 : 0;
+        40 : 0;
 }
 
 
@@ -115,5 +115,5 @@ main();
 module.exports = {
     handleBasic, handleThreeOfKind,
     handleFourOfKind, handleFullHouse,
-    handleSmallStraight
+    handleLargeStraight
 };
