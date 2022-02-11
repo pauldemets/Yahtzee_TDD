@@ -93,3 +93,12 @@ test('test yahtzee', () => {
     const dices3 = [1, 1, 1, 1, 1];
     expect(yahtzee.handleYahtzee(dices3)).toBe(50);
 });
+
+test('test chance', () => {
+    const dices = [5, 5, 2, 5, 3];
+    expect(yahtzee.handleChance(dices)).toBe(20);
+    const dices2 = [1, 1, 3, 4, 5];
+    expect(yahtzee.handleChance(dices2)).toBe(14);
+    const dices3 = [1, 1, 1, 1, 1];
+    expect(yahtzee.handleChance(dices3)).toBe(5);
+});

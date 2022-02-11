@@ -145,6 +145,10 @@ const handleYahtzee = (dices) => {
         50 : 0;
 }
 
+const handleChance = (dices) => {
+    return -1;
+}
+
 
 const main = () => {
 }
@@ -157,5 +161,5 @@ module.exports = {
     handleBasic, handleThreeOfKind,
     handleFourOfKind, handleFullHouse,
     handleLargeStraight, handleSmallStraight,
-    handleYahtzee
+    handleYahtzee, handleChance
 };
