@@ -1,6 +1,6 @@
 const DICES = [
     1,
-    2,
+    6,
     6,
     1,
     1
@@ -70,13 +70,26 @@ const handleFourOfKind = (dices) => {
         0;
 }
 
-const handleFullHouse = () => {
-    return 0;
+const handleFullHouse = (dices) => {
+    var occurrences = {};
+
+    dices.forEach(dice => {
+        if (dice in occurrences) {
+            occurrences[dice] += 1;
+        }
+        else {
+            occurrences[dice] = 1;
+        }
+    });
+
+    return Object.keys(occurrences).length === 2 ?
+        25 :
+        0;
 }
 
 
 const main = () => {
-    handleThreeOfKind(DICES);
+    handleFullHouse(DICES);
 }
 
 
