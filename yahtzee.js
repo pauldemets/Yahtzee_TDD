@@ -28,6 +28,10 @@ const handleTwos = (dices) => {
     return cpt * 2;
 }
 
+const handleThrees = (dices) => {
+    return null;
+}
+
 
 const main = () => {
     handleAces(DICES);
@@ -37,4 +41,4 @@ const main = () => {
 main();
 
 
-module.exports = { handleAces, handleTwos };
+module.exports = { handleAces, handleTwos, handleThrees };
