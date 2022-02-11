@@ -17,6 +17,17 @@ const handleAces = (dices) => {
     return cpt;
 }
 
+const handleTwos = (dices) => {
+    var cpt = 0;
+    dices.forEach(dice => {
+        if (dice === 2) {
+            cpt++;
+        }
+    });
+
+    return cpt * 2;
+}
+
 
 const main = () => {
     handleAces(DICES);
@@ -26,4 +37,4 @@ const main = () => {
 main();
 
 
-module.exports = { handleAces };
+module.exports = { handleAces, handleTwos };
