@@ -29,7 +29,14 @@ const handleTwos = (dices) => {
 }
 
 const handleThrees = (dices) => {
-    return null;
+    var cpt = 0;
+    dices.forEach(dice => {
+        if (dice === 3) {
+            cpt++;
+        }
+    });
+
+    return cpt * 3;
 }
 
 
