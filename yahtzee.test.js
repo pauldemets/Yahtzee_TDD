@@ -13,4 +13,6 @@ test('test twos', () => {
 test('test threes', () => {
     const dices = [2, 2, 1, 2, 1];
     expect(yahtzee.handleThrees(dices)).toBe(0);
+    const dices2 = [6, 3, 3, 3, 1];
+    expect(yahtzee.handleThrees(dices2)).toBe(9);
 });
