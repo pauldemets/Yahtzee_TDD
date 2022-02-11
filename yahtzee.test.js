@@ -46,3 +46,10 @@ test('test three of a kind', () => {
     const dices3 = [1, 1, 1, 6, 4];
     expect(yahtzee.handleThreeOfKind(dices3)).toBe(13);
 });
+
+test('test four of a kind', () => {
+    const dices = [4, 3, 4, 4, 4];
+    expect(yahtzee.handleFourOfKind(dices)).toBe(19);
+    const dices2 = [2, 6, 1, 4, 4];
+    expect(yahtzee.handleFourOfKind(dices2)).toBe(0);
+});

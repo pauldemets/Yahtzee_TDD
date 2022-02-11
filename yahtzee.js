@@ -47,6 +47,10 @@ const handleThreeOfKind = (dices) => {
         0;
 }
 
+const handleFourOfKind = (dices) => {
+    return 0;
+}
+
 
 const main = () => {
     handleThreeOfKind(DICES);
@@ -56,4 +60,4 @@ const main = () => {
 main();
 
 
-module.exports = { handleBasic, handleThreeOfKind };
+module.exports = { handleBasic, handleThreeOfKind, handleFourOfKind };
