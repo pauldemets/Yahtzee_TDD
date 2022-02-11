@@ -48,7 +48,26 @@ const handleThreeOfKind = (dices) => {
 }
 
 const handleFourOfKind = (dices) => {
-    return 0;
+    var occurrences = {};
+    var isValid = false;
+    var i = 0;
+
+    while (i < 6 && !isValid) {
+        var dice = dices[i];
+
+        if (dice in occurrences) {
+            occurrences[dice] += 1;
+            isValid = occurrences[dice] >= 4;
+        }
+        else {
+            occurrences[dice] = 1;
+        }
+        i++;
+    }
+
+    return isValid ?
+        calculateSumDice(dices) :
+        0;
 }
 
 
