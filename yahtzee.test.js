@@ -52,4 +52,15 @@ test('test four of a kind', () => {
     expect(yahtzee.handleFourOfKind(dices)).toBe(19);
     const dices2 = [2, 6, 1, 4, 4];
     expect(yahtzee.handleFourOfKind(dices2)).toBe(0);
+    const dices3 = [5, 3, 5, 5, 5];
+    expect(yahtzee.handleFourOfKind(dices3)).toBe(23);
+});
+
+test('test full house', () => {
+    const dices = [2, 2, 5, 5, 5];
+    expect(yahtzee.handleFullHouse(dices)).toBe(25);
+    const dices2 = [2, 6, 1, 4, 4];
+    expect(yahtzee.handleFullHouse(dices2)).toBe(0);
+    const dices3 = [3, 1, 1, 1, 3];
+    expect(yahtzee.handleFullHouse(dices3)).toBe(25);
 });
