@@ -25,18 +25,22 @@ const calculateSumDice = (dices) => {
 }
 
 const handleThreeOfKind = (dices) => {
-    var occurrence = {};
+    var occurrences = {};
     var isValid = false;
+    var i = 0;
 
-    dices.forEach(dice => {
-        if (dice in occurrence) {
-            occurrence[dice] += 1;
-            occurrence[dice] >= 3 ? isValid = true : null;
+    while (i < 6 && !isValid) {
+        var dice = dices[i];
+
+        if (dice in occurrences) {
+            occurrences[dice] += 1;
+            isValid = occurrences[dice] >= 3;
         }
         else {
-            occurrence[dice] = 1;
+            occurrences[dice] = 1;
         }
-    });
+        i++;
+    }
 
     return isValid ?
         calculateSumDice(dices) :
