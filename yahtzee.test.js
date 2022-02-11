@@ -64,3 +64,10 @@ test('test full house', () => {
     const dices3 = [3, 1, 1, 1, 3];
     expect(yahtzee.handleFullHouse(dices3)).toBe(25);
 });
+
+test('test small straight', () => {
+    const dices = [2, 3, 4, 5, 6];
+    expect(yahtzee.handleSmallStraight(dices)).toBe(30);
+    const dices2 = [2, 6, 1, 4, 4];
+    expect(yahtzee.handleSmallStraight(dices2)).toBe(0);
+});

@@ -87,6 +87,10 @@ const handleFullHouse = (dices) => {
         0;
 }
 
+const handleSmallStraight = () => {
+    return -1;
+}
+
 
 const main = () => {
     handleFullHouse(DICES);
@@ -96,4 +100,8 @@ const main = () => {
 main();
 
 
-module.exports = { handleBasic, handleThreeOfKind, handleFourOfKind, handleFullHouse };
+module.exports = {
+    handleBasic, handleThreeOfKind,
+    handleFourOfKind, handleFullHouse,
+    handleSmallStraight
+};
