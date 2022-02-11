@@ -23,3 +23,10 @@ test('test fours', () => {
     const dices2 = [6, 4, 4, 3, 4];
     expect(yahtzee.handleBasic(dices2, 4)).toBe(12);
 });
+
+test('test fives', () => {
+    const dices = [5, 5, 1, 2, 1];
+    expect(yahtzee.handleBasic(dices, 5)).toBe(10);
+    const dices2 = [6, 5, 5, 5, 5];
+    expect(yahtzee.handleBasic(dices2, 5)).toBe(20);
+});
