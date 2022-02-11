@@ -84,3 +84,10 @@ test('test large straight', () => {
     const dices3 = [2, 6, 1, 4, 4];
     expect(yahtzee.handleLargeStraight(dices3)).toBe(0);
 });
+
+test('test yahtzee', () => {
+    const dices = [5, 5, 5, 5, 5];
+    expect(yahtzee.handleYahtzee(dices)).toBe(50);
+    const dices2 = [1, 2, 3, 4, 5];
+    expect(yahtzee.handleYahtzee(dices2)).toBe(0);
+});

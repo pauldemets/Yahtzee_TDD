@@ -128,6 +128,10 @@ const handleLargeStraight = (dices) => {
         40 : 0;
 }
 
+const handleYahtzee = () => {
+    return -1;
+}
+
 
 const main = () => {
 }
@@ -139,5 +143,6 @@ main();
 module.exports = {
     handleBasic, handleThreeOfKind,
     handleFourOfKind, handleFullHouse,
-    handleLargeStraight, handleSmallStraight
+    handleLargeStraight, handleSmallStraight,
+    handleYahtzee
 };
