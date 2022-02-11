@@ -6,8 +6,6 @@ const DICES = [
     1
 ];
 
-
-
 const handleBasic = (dices, number) => {
     var cpt = 0;
     dices.forEach(dice => {
@@ -16,6 +14,10 @@ const handleBasic = (dices, number) => {
         }
     });
     return cpt * number;
+}
+
+const handleThreeOfKind = () => {
+    return null;
 }
 
 
@@ -27,4 +29,4 @@ const main = () => {
 main();
 
 
-module.exports = { handleBasic };
+module.exports = { handleBasic, handleThreeOfKind };

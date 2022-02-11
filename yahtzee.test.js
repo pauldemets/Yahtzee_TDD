@@ -37,3 +37,8 @@ test('test sixes', () => {
     const dices2 = [2, 6, 2, 6, 5];
     expect(yahtzee.handleBasic(dices2, 6)).toBe(12);
 });
+
+test('test three of a kind', () => {
+    const dices = [2, 3, 4, 4, 4];
+    expect(yahtzee.handleThreeOfKind(dices)).toBe(17);
+});
