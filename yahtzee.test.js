@@ -90,4 +90,6 @@ test('test yahtzee', () => {
     expect(yahtzee.handleYahtzee(dices)).toBe(50);
     const dices2 = [1, 2, 3, 4, 5];
     expect(yahtzee.handleYahtzee(dices2)).toBe(0);
+    const dices3 = [1, 1, 1, 1, 1];
+    expect(yahtzee.handleYahtzee(dices3)).toBe(50);
 });

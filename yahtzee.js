@@ -93,7 +93,7 @@ const handleSmallStraight = (dices) => {
     var cpt = 0;
     var isValid = false;
 
-    while (i < 6 && !isValid) {
+    while (i < 5 && !isValid) {
         if (dices[i] > tempDice) {
             cpt++;
             if (cpt >= 4) {
@@ -116,7 +116,7 @@ const handleLargeStraight = (dices) => {
     var i = 0;
     var tempDice = -1;
 
-    while (i < 6 && isValid) {
+    while (i < 5 && isValid) {
         if (dices[i] <= tempDice) {
             isValid = false;
         }
@@ -128,8 +128,21 @@ const handleLargeStraight = (dices) => {
         40 : 0;
 }
 
-const handleYahtzee = () => {
-    return -1;
+const handleYahtzee = (dices) => {
+    var tempDice = -1;
+    var isValid = true;
+    var i = 0;
+
+    while (i < 5 && isValid) {
+        if (tempDice !== dices[i] && tempDice != -1) {
+            isValid = false;
+        }
+        tempDice = dices[i];
+        i++;
+    }
+
+    return isValid ?
+        50 : 0;
 }
 
 
