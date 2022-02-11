@@ -146,7 +146,7 @@ const handleYahtzee = (dices) => {
 }
 
 const handleChance = (dices) => {
-    return -1;
+    return calculateSumDice(dices);
 }
 
 
