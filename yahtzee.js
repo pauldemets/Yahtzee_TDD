@@ -87,13 +87,25 @@ const handleFullHouse = (dices) => {
         0;
 }
 
-const handleSmallStraight = () => {
-    return -1;
+const handleSmallStraight = (dices) => {
+    var isValid = true;
+    var i = 0;
+    var tempDice = -1;
+
+    while (i < 6 && isValid) {
+        if (dices[i] <= tempDice) {
+            isValid = false;
+        }
+        tempDice = dices[i];
+        i++;
+    }
+
+    return isValid ?
+        30 : 0;
 }
 
 
 const main = () => {
-    handleFullHouse(DICES);
 }
 
 

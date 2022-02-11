@@ -68,6 +68,8 @@ test('test full house', () => {
 test('test small straight', () => {
     const dices = [2, 3, 4, 5, 6];
     expect(yahtzee.handleSmallStraight(dices)).toBe(30);
-    const dices2 = [2, 6, 1, 4, 4];
-    expect(yahtzee.handleSmallStraight(dices2)).toBe(0);
+    const dices2 = [1, 2, 3, 4, 5];
+    expect(yahtzee.handleSmallStraight(dices2)).toBe(30);
+    const dices3 = [2, 6, 1, 4, 4];
+    expect(yahtzee.handleSmallStraight(dices3)).toBe(0);
 });
