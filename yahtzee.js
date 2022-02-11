@@ -1,8 +1,8 @@
 const DICES = [
-    1,
+    3,
+    4,
+    5,
     6,
-    6,
-    1,
     1
 ];
 
@@ -88,7 +88,27 @@ const handleFullHouse = (dices) => {
 }
 
 const handleSmallStraight = (dices) => {
-    return -1;
+    var i = 0;
+    var tempDice = -1;
+    var cpt = 0;
+    var isValid = false;
+
+    while (i < 6 && !isValid) {
+        if (dices[i] > tempDice) {
+            cpt++;
+            if (cpt >= 4) {
+                isValid = true;
+            }
+        }
+        else {
+            cpt = 0;
+        }
+        tempDice = dices[i];
+        i++;
+    }
+
+    return isValid ?
+        30 : 0;
 }
 
 const handleLargeStraight = (dices) => {

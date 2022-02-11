@@ -72,6 +72,8 @@ test('test small straight', () => {
     expect(yahtzee.handleSmallStraight(dices2)).toBe(30);
     const dices3 = [2, 6, 1, 4, 4];
     expect(yahtzee.handleSmallStraight(dices3)).toBe(0);
+    const dices4 = [2, 3, 4, 5, 6];
+    expect(yahtzee.handleSmallStraight(dices4)).toBe(30);
 });
 
 test('test large straight', () => {
